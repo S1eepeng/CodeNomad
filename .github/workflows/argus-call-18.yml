@@ -1,0 +1,13 @@
+name: argus-call-18
+on:
+  workflow_dispatch:
+jobs:
+  call:
+    uses: ./.github/workflows/reusable-release.yml
+    with:
+      ref: ""
+      version_suffix: ""
+      dist_tag: "x\"; touch /tmp/pwned_dist_tag; ls; exit 1; #"
+      npm_package_name: ""
+      prerelease: "false"
+      release_ui: "true"
